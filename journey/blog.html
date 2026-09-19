@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Blog — Elena &amp; Marco</title>
+  <meta name="description" content="Wedding invitation stories, tips, and ideas for our guests." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="meta fade">Wedding Blog</p>
+        <h1 aria-label="Stories, tips and ideas"><span class="row"><span class="line-in">The Journal</span></span></h1>
+        <p class="page-hero__lede fade">Wedding invitation stories, tips, and ideas for the people joining us.</p>
+      </div>
+    </header>
+    <section class="section" style="padding-top:clamp(1rem,3vw,2rem)">
+      <div class="wrap"><div class="blog-grid" id="blogGrid"></div></div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/partials.js"></script>
+  <script>
+    (function () {
+      var cfg = window.weddingConfig, IMG = window.IMG;
+      var host = document.getElementById("blogGrid");
+      cfg.blog.forEach(function (a) {
+        var t = document.createElement("template");
+        t.innerHTML = (
+          '<article class="article-card" data-cursor="READ" data-reveal>' +
+            '<a href="article.html?a=' + a.slug + '" class="article-card__media img-mask"><img src="' + IMG(a.img, 900) + '" alt="' + a.title + '" loading="lazy" /></a>' +
+            '<div class="article-card__tags meta"><span>' + a.cat + '</span><span>' + a.date + '</span></div>' +
+            '<a href="article.html?a=' + a.slug + '" class="article-card__title">' + a.title + '</a>' +
+            '<p class="article-card__excerpt">' + a.excerpt + '</p>' +
+            '<a href="article.html?a=' + a.slug + '" class="ul meta" style="color:var(--plum)">Read story →</a>' +
+          '</article>'
+        ).trim();
+        host.appendChild(t.content.firstChild);
+      });
+      if (window.WED_bindCursor) window.WED_bindCursor();
+    })();
+  </script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Story — Elena &amp; Marco</title>
+  <meta name="description" content="A story from Elena & Marco's wedding journal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main>
+    <header class="article-hero wrap">
+      <a href="blog.html" class="meta ul fade" data-cursor="BACK" style="display:inline-block;margin-bottom:1.4rem">← The Journal</a>
+      <div class="article-hero__tags"><span class="meta" data-art-cat>Love Story</span><span class="meta" data-art-date>Mar 2027</span><span class="meta">3 min read</span></div>
+      <h1 data-art-title>A Story</h1>
+    </header>
+    <div class="wrap">
+      <div class="article-cover img-mask" data-parallax="0.05"><img data-art-cover src="" alt="" loading="eager" /></div>
+    </div>
+    <article class="section article-body" style="padding-top:0">
+      <p class="dropcap fade" data-art-lede></p>
+      <p class="fade">Every wedding is really a stack of small moments — the ones that never make it onto an invitation but somehow decide everything. This is one of ours, written down before we forget the details we swear we never will.</p>
+      <h2 class="fade">How it actually went</h2>
+      <p class="fade">It was less cinematic than the version we tell at dinner parties and far better than either of us expected. There was a plan; the plan fell apart; what remained was the part that mattered.</p>
+      <blockquote class="fade">The best parts were never the ones we planned.</blockquote>
+      <p class="fade">If you're reading this as a guest, thank you — genuinely. The whole point of gathering everyone is that these small moments get a few more witnesses. We can't wait to make some new ones with you there.</p>
+    </article>
+
+    <a class="next-article" data-next href="#" data-cursor="NEXT">
+      <div class="next-article__inner wrap">
+        <span class="next-article__label">Next Story</span>
+        <div class="next-article__title" data-next-title>Next</div>
+      </div>
+    </a>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/partials.js"></script>
+  <script>
+    (function () {
+      var cfg = window.weddingConfig, IMG = window.IMG;
+      var slug = new URLSearchParams(location.search).get("a");
+      var i = cfg.blog.findIndex(function (a) { return a.slug === slug; });
+      if (i < 0) i = 0;
+      var a = cfg.blog[i], next = cfg.blog[(i + 1) % cfg.blog.length];
+      document.title = a.title + " — Elena & Marco";
+      var set = function (sel, v) { var e = document.querySelector(sel); if (e) e.textContent = v; };
+      set("[data-art-cat]", a.cat); set("[data-art-date]", a.date); set("[data-art-title]", a.title);
+      set("[data-art-lede]", a.excerpt + " Here is a little more of the story behind it.");
+      var cov = document.querySelector("[data-art-cover]"); cov.src = IMG(a.img, 1600); cov.alt = a.title;
+      var nx = document.querySelector("[data-next]"); nx.href = "article.html?a=" + next.slug;
+      set("[data-next-title]", next.title);
+      if (window.WED_bindCursor) window.WED_bindCursor();
+    })();
+  </script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
