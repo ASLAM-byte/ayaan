@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCHA — A ritual for people romanticizing everyday life</title>
+  <meta name="description" content="OCHA is a high-energy matcha bar serving liquid vibes and stone-ground fuel for the creative class. A ritual for people romanticizing everyday life, one matcha at a time." />
+  <meta property="og:title" content="OCHA — Matcha, ritualized." />
+  <meta property="og:description" content="A ritual for people romanticizing everyday life, one matcha at a time." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <!-- ===== Loader ===== -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__mark"><span>O</span><span>C</span><span>H</span><span>A</span></div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" aria-label="Primary">
+    <a href="#top" class="nav__logo" data-magnetic="0.2">OCHA</a>
+    <div class="nav__links">
+      <a href="#specials" class="ulink">Specials</a>
+      <a href="#team" class="ulink">Inside Ocha</a>
+      <a href="#merch" class="ulink">Merch</a>
+      <a href="#community" class="ulink">Community</a>
+      <a href="#journal" class="ulink">Journal</a>
+      <a href="#faq" class="ulink">FAQ</a>
+    </div>
+    <div class="nav__right">
+      <a href="#order" class="btn btn--matcha" data-magnetic="0.3" data-cursor="ORDER">Order <span class="arrow">↗</span></a>
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Full-screen mobile menu ===== -->
+  <div class="menu" id="mobile-menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#specials"><span>Specials</span></a>
+      <a href="#reviews"><span>Reviews</span></a>
+      <a href="#team"><span>Inside Ocha</span></a>
+      <a href="#merch"><span>Merch</span></a>
+      <a href="#community"><span>Community</span></a>
+      <a href="#journal"><span>Journal</span></a>
+      <a href="#faq"><span>FAQ</span></a>
+      <a href="#order"><span>Order</span></a>
+    </nav>
+    <div class="menu__foot">
+      <span>711 N Franklin St, Tampa, FL</span>
+      <span>hello@ocha.cafe</span>
+      <span>@ocha</span>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <header class="hero wrap">
+      <h1 class="hero__word" aria-label="OCHA">
+        <span><i>O</i></span><span><i>C</i></span><span><i>H</i></span><span><i>A</i></span>
+      </h1>
+      <div class="hero__media img-mask" data-parallax="0.08" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=800&auto=format&fit=crop" alt="A bowl of freshly whisked ceremonial matcha" loading="eager" />
+      </div>
+      <div class="hero__grid">
+        <p class="hero__statement" data-split="word">A ritual for people romanticizing everyday life, one matcha at a time.</p>
+        <div class="hero__aside">
+          <p class="eyebrow fade-up">California sunshine · Japanese tradition</p>
+          <a href="#order" class="btn" data-magnetic="0.3" data-cursor="ORDER">Order Now <span class="arrow">↗</span></a>
+          <a href="#specials" class="hero__scroll fade-up" aria-label="Scroll to explore">
+            Scroll <span class="line"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Ticker ===== -->
+    <div class="marquee marquee--matcha" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Ceremonial Grade <b class="dot">✦</b> Stone-Ground Daily <b class="dot">✦</b> Liquid Vibes <b class="dot">✦</b> Slow Mornings <b class="dot">✦</b> Good Energy <b class="dot">✦</b></span>
+      </div>
+    </div>
+
+    <!-- ===== SPECIALS ===== -->
+    <section class="section specials" id="specials">
+      <div class="label-band" aria-hidden="true"><h2 data-scrollx="0.2">S P E C I A L S</h2></div>
+      <div class="wrap">
+        <div class="sec-intro">
+          <span class="eyebrow fade-up">01 — The Menu</span>
+          <h3 class="hidden-visually">Specials</h3>
+        </div>
+        <div class="specials__inner">
+          <div class="menu-list" role="list">
+            <!-- items injected by content.js -->
+          </div>
+          <div class="specials__preview" aria-hidden="true">
+            <!-- figures injected by content.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track marquee-reviews">
+          <span>R E V I E W S <b class="dot">✦</b> R E V I E W S <b class="dot">✦</b></span>
+        </div>
+      </div>
+      <div class="wrap" style="padding-top: clamp(2rem,6vw,4rem)">
+        <div class="reviews-list"><!-- injected --></div>
+      </div>
+    </section>
+
+    <!-- ===== TEAM / INSIDE OCHA ===== -->
+    <section class="section team" id="team">
+      <div class="wrap">
+        <div class="team__head">
+          <h2 data-split="char">Inside (the) Ocha</h2>
+          <p class="fade-up">The people behind your favorite matcha, questionable playlists, and the good energy you keep coming back for.</p>
+        </div>
+        <div class="team__grid" data-stagger="0.06"><!-- injected --></div>
+      </div>
+    </section>
+
+    <!-- ===== MERCH ===== -->
+    <section class="section merch" id="merch">
+      <div class="label-band" aria-hidden="true"><h2 data-scrollx="-0.2">M E R C H</h2></div>
+      <div class="wrap">
+        <div class="merch__head">
+          <h2 data-split="word">Wear the ritual.</h2>
+          <p class="eyebrow fade-up" data-cursor="DRAG">02 — Drag to explore →</p>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="hscroll" data-drag><!-- injected --></div>
+      </div>
+    </section>
+
+    <!-- ===== COMMUNITY ===== -->
+    <section class="section community" id="community">
+      <div class="label-band" aria-hidden="true"><h2 data-scrollx="0.2">COMMUNITY</h2></div>
+      <div class="wrap">
+        <p class="community__intro" data-split="word">We are a high-energy matcha bar, serving <span>liquid vibes</span> and stone-ground fuel for the creative class.</p>
+        <div class="events" data-stagger="0.05"><!-- injected --></div>
+      </div>
+    </section>
+
+    <!-- ===== JOURNAL ===== -->
+    <section class="section journal" id="journal">
+      <div class="wrap">
+        <div class="journal__head">
+          <h2 data-split="word">Daily Ritual</h2>
+          <a href="journal.html" class="ulink eyebrow">View all articles →</a>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="hscroll" data-drag data-cursor="DRAG"><!-- injected --></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="wrap">
+        <div class="faq__grid">
+          <h2 data-split="char">FAQ</h2>
+          <div class="faq-list"><!-- injected --></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== LOCATION / FOOTER ===== -->
+  <footer class="footer" id="order">
+    <div class="wrap">
+      <div class="footer__top">
+        <p class="footer__lead" data-split="word">California sunshine, <span>Japanese tradition,</span> modern matcha culture.</p>
+        <div class="footer__col">
+          <h4>Visit</h4>
+          <p>711 N Franklin St,<br />Tampa, FL 33602</p>
+          <p>Open daily · 7am – 6pm</p>
+          <a href="#" class="ulink">Get directions ↗</a>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <a href="mailto:hello@ocha.cafe" class="ulink">hello@ocha.cafe</a>
+          <a href="#" class="ulink">Instagram</a>
+          <a href="#" class="ulink">TikTok</a>
+          <a href="#" class="ulink">Newsletter</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__mark" aria-hidden="true">OCHA</div>
+    <div class="footer__cta">
+      <a href="#" class="btn" data-magnetic="0.35" data-cursor="ORDER" style="border-color: var(--cream); color: var(--cream);">Order Now <span class="arrow">↗</span></a>
+    </div>
+    <div class="wrap">
+      <div class="footer__legal">
+        <span>© <span id="year"></span> OCHA Matcha Bar</span>
+        <span>Liquid vibes · Stone-ground fuel</span>
+        <span>Made with 🍵</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/content.js"></script>
+  <script src="js/anim.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
