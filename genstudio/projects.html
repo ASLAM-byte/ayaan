@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — GEN STUDIO</title>
+  <meta name="description" content="Selected AI visual projects created for modern brands and campaigns." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <main>
+    <header class="page-hero wrap">
+      <div class="page-hero__label meta spaced fade">03 — Selected Work</div>
+      <h1 aria-label="Projects">
+        <span class="row"><span class="line-in">Projects</span></span>
+      </h1>
+      <p class="page-hero__lede fade">Selected AI visual projects created for modern brands and campaigns — from short-form film to full identity systems.</p>
+    </header>
+
+    <section class="section" style="padding-top: clamp(2rem,5vw,4rem)">
+      <div class="wrap">
+        <div class="projects-grid" id="projectsGrid"><!-- injected --></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/partials.js"></script>
+  <script src="js/data.js"></script>
+  <script>
+    (function () {
+      var D = window.GEN_DATA; if (!D) return;
+      var host = document.getElementById("projectsGrid");
+      D.projects.forEach(function (p) {
+        var t = document.createElement("template");
+        t.innerHTML = (
+          '<a class="project-card" href="projects/' + p.slug + '.html" data-cursor="VIEW PROJECT" data-reveal>' +
+            '<div class="project-card__media img-mask"><img src="' + D.IMG(p.cover, 900) + '" alt="' + p.title + '" loading="lazy" /></div>' +
+            '<div class="project-card__top"><span class="project-card__title">' + p.title + '</span><span class="project-card__arw" aria-hidden="true">↗</span></div>' +
+            '<div class="project-card__meta meta"><span>' + p.date + '</span><span>' + p.category + '</span><span>' + p.location + '</span></div>' +
+          '</a>'
+        ).trim();
+        host.appendChild(t.content.firstChild);
+      });
+      if (window.GEN_bindCursor) window.GEN_bindCursor();
+    })();
+  </script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
