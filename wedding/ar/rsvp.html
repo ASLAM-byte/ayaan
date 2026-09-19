@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تأكيد الحضور — ليلى وآدم</title>
+  <meta name="description" content="نرجو تأكيد حضوركم لحفل زفاف ليلى وآدم." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body data-lang="ar" dir="rtl">
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="meta fade" data-i18n="rsvp.kicker">شاركونا</p>
+        <h1 aria-label="نرجو تأكيد الحضور"><span class="row"><span class="line-in" data-i18n="rsvp.title">نرجو تأكيد الحضور</span></span></h1>
+        <p class="page-hero__lede fade" data-i18n="rsvp.note">يرجى الرد قبل ١ سبتمبر ٢٠٢٦.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:clamp(1rem,3vw,2rem)">
+      <div class="wrap rsvp__grid">
+        <form data-rsvp novalidate>
+          <div class="field two">
+            <div data-field="name">
+              <label for="r-name" data-i18n="rsvp.name">الاسم الكامل</label>
+              <input type="text" id="r-name" name="name" autocomplete="name" required />
+              <div class="field__err"></div>
+            </div>
+            <div data-field="email">
+              <label for="r-email" data-i18n="rsvp.email">البريد الإلكتروني</label>
+              <input type="email" id="r-email" name="email" autocomplete="email" required />
+              <div class="field__err"></div>
+            </div>
+          </div>
+
+          <div class="field" data-field="attending">
+            <label data-i18n="rsvp.attending">هل ستحضرون؟</label>
+            <div class="attend">
+              <label><input type="radio" name="attending" value="yes" /> <span data-i18n="rsvp.yes">سأحضر بكل سرور</span></label>
+              <label><input type="radio" name="attending" value="no" /> <span data-i18n="rsvp.no">أعتذر عن الحضور</span></label>
+            </div>
+            <div class="field__err"></div>
+          </div>
+
+          <div class="field two">
+            <div>
+              <label for="r-guests" data-i18n="rsvp.guests">عدد الضيوف</label>
+              <input type="number" id="r-guests" name="guests" min="0" max="10" value="1" />
+            </div>
+            <div>
+              <label for="r-diet" data-i18n="rsvp.diet">متطلبات غذائية</label>
+              <input type="text" id="r-diet" name="diet" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="r-song" data-i18n="rsvp.song">طلب أغنية (اختياري)</label>
+            <input type="text" id="r-song" name="song" />
+          </div>
+
+          <div class="field">
+            <label for="r-message" data-i18n="rsvp.message">كلمة لنا</label>
+            <textarea id="r-message" name="message" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--accent btn--lg rsvp__submit" data-magnetic="0.25" data-cursor="افتح" data-i18n="rsvp.submit">إرسال التأكيد <span class="arw">↗</span></button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/partials.js"></script>
+  <script src="../js/render.js"></script>
+  <script src="../js/page.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/engine.js"></script>
+  <script src="../js/ui.js"></script>
+</body>
+</html>
