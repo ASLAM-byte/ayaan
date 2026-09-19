@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio — Designer & Developer Portfolio</title>
+  <meta name="description" content="Designing and developing digital tools with an emphasis on clarity, performance, and restraint." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="#top" class="nav-mark">STUDIO<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <span class="nav-status"><span class="pulse"></span>Available for work</span>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <p class="eyebrow reveal">Designer &amp; Developer</p>
+    <h1 class="hero-title reveal">
+      I design and develop digital tools with an emphasis on
+      <em>clarity, performance, and restraint.</em>
+    </h1>
+    <p class="hero-sub reveal">
+      Currently working on products that value long-term thinking over quick wins.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#work" class="btn">Selected Work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </header>
+
+  <!-- Work -->
+  <section class="section" id="work">
+    <div class="section-head reveal">
+      <h2 class="section-title">Selected Work</h2>
+      <span class="section-count" id="workCount"></span>
+    </div>
+    <div class="work-list" id="workList">
+      <p class="loading">Loading projects…</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="about-grid">
+      <h2 class="section-title reveal">About</h2>
+      <div class="about-body reveal">
+        <p>
+          I'm an independent designer and developer working at the intersection of
+          product design and engineering. My focus is quiet software — interfaces that
+          feel obvious, load instantly, and get out of the way.
+        </p>
+        <p>
+          Over the last decade I've helped startups and studios ship products across
+          fintech, developer tools, and editorial platforms. I care about typography,
+          motion with purpose, and code that ages well.
+        </p>
+        <ul class="about-meta">
+          <li><span>Focus</span>Product design, design systems, frontend</li>
+          <li><span>Tools</span>Figma, TypeScript, React, Node</li>
+          <li><span>Based in</span>Remote — working worldwide</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="contact-inner reveal">
+      <h2 class="section-title">Let's build something.</h2>
+      <p class="contact-sub">
+        Have a project in mind, or just want to say hello? Send a note and I'll get back to you.
+      </p>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="row">
+          <div class="field">
+            <input type="text" id="cName" name="name" placeholder=" " required />
+            <label for="cName">Name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="cEmail" name="email" placeholder=" " required />
+            <label for="cEmail">Email</label>
+          </div>
+        </div>
+        <div class="field">
+          <textarea id="cBody" name="body" rows="4" placeholder=" " required></textarea>
+          <label for="cBody">Message</label>
+        </div>
+        <button type="submit" class="btn" id="cSubmit">Send message</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Studio</span>
+    <span>Built with clarity, performance &amp; restraint.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

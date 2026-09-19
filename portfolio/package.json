@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-fullstack",
+  "version": "1.0.0",
+  "description": "A minimal dark designer portfolio — full stack, zero external dependencies (Node built-in http + SQLite).",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --experimental-sqlite src/server.js",
+    "seed": "node --experimental-sqlite src/seed.js"
+  },
+  "keywords": ["portfolio", "http", "sqlite", "zero-dependency"],
+  "license": "MIT"
+}
