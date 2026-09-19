@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elena &amp; Marco — 12 June 2027</title>
+  <meta name="description" content="Elena & Marco are getting married on 12 June 2027 at Villa Lucía, Lake Como. Together with their families, they'd love for you to celebrate with them." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader__mono"><span>Elena &amp; Marco</span></div></div>
+
+  <main>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero__bg"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" alt="Elena and Marco" loading="eager" /></div>
+      <div class="hero__inner wrap">
+        <p class="hero__invite meta fade">Together with their families</p>
+        <h1 class="hero__names" aria-label="Elena and Marco">
+          <span class="row"><i data-bind="p1">Elena</i></span>
+          <span class="amp">&amp;</span>
+          <span class="row"><i data-bind="p2">Marco</i></span>
+        </h1>
+        <div class="hero__meta">
+          <span class="hero__date fade" data-bind="date">Saturday, 12 June 2027</span>
+          <span class="hero__day fade" data-bind="day">Saturday</span>
+        </div>
+        <div class="hero__cta fade"><a href="#rsvp" class="btn btn--light" data-magnetic="0.3" data-cursor="RSVP">RSVP Now <span class="arw">↗</span></a></div>
+      </div>
+      <a href="#couple" class="hero__scroll" aria-label="Scroll down"><span>Scroll</span><span class="ln"></span></a>
+    </header>
+
+    <!-- COUPLE -->
+    <section class="section couple" id="couple">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="meta">Meet the couple</span>
+          <h2 data-split="word">The Bride &amp; Groom</h2>
+        </div>
+        <div class="couple__stage">
+          <div class="couple__grid" data-render="couple"></div>
+          <div class="couple__controls">
+            <button class="couple__dot" data-couple-prev aria-label="Previous">‹</button>
+            <button class="couple__dot" data-couple-next aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="section quote">
+      <div class="wrap">
+        <p aria-label="And so the adventure begins">
+          <span class="line-mask"><span class="line-in">And so the</span></span>
+          <span class="line-mask"><span class="line-in italic">adventure begins.</span></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- FACTS -->
+    <section class="section">
+      <div class="wrap">
+        <div class="facts__grid" data-render="facts" data-stagger="0.1"></div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section journey" id="journey">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="meta">Our Journey</span>
+          <h2 data-split="word">From First Meeting to Forever</h2>
+        </div>
+        <div class="timeline" data-render="journey"></div>
+      </div>
+    </section>
+
+    <!-- THE BIG DAY -->
+    <section class="section bigday">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="meta">The Big Day</span>
+          <h2 data-split="word">Everything You Need to Know</h2>
+          <p>The details for our celebration, gathered in one place.</p>
+        </div>
+        <div class="bigday__grid" data-render="bigday" data-stagger="0.12"></div>
+      </div>
+    </section>
+
+    <!-- WEDDING DATE -->
+    <section class="section datevis">
+      <div class="wrap">
+        <p class="datevis__day fade" data-bind="dateDay">Saturday</p>
+        <div class="datevis__date fade" data-bind="dateLine">12 . 06 . 2027</div>
+        <p class="datevis__year fade" data-bind="dateYear">2027</p>
+      </div>
+    </section>
+
+    <!-- EVENT TIMELINE -->
+    <section class="section events" id="events">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="meta">The Order of the Day</span>
+          <h2 data-split="word">Wedding Day Timeline</h2>
+        </div>
+        <div class="events__list" data-render="events"></div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown">
+      <div class="wrap">
+        <p class="meta fade">Counting down to the day</p>
+        <div class="countdown__grid" data-countdown>
+          <div class="cd-unit"><div class="cd-unit__num" data-cd="days"><span class="tick">0</span></div><div class="cd-unit__label">Days</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-unit__num" data-cd="hours"><span class="tick">00</span></div><div class="cd-unit__label">Hours</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-unit__num" data-cd="minutes"><span class="tick">00</span></div><div class="cd-unit__label">Minutes</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-unit__num" data-cd="seconds"><span class="tick">00</span></div><div class="cd-unit__label">Seconds</div></div>
+        </div>
+        <p class="countdown__past" data-countdown-past hidden>Married, and grateful — thank you for celebrating with us.</p>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section rsvp" id="rsvp">
+      <div class="rsvp__bg"><img data-rsvp-bg src="" alt="" loading="lazy" /></div>
+      <div class="wrap">
+        <div class="rsvp__inner">
+          <span class="meta fade" style="color:var(--sand)">Join us</span>
+          <h2 data-split="word">Kindly Respond</h2>
+          <p class="rsvp__note fade" data-bind="rsvpNote">Kindly respond before 1 May 2027.</p>
+
+          <form class="rsvp__form" data-rsvp-form novalidate>
+            <div class="field two">
+              <div data-field="name"><label for="r-name">Your Name</label><input type="text" id="r-name" name="name" autocomplete="name" required /><div class="field__err"></div></div>
+              <div data-field="email"><label for="r-email">Email Address</label><input type="email" id="r-email" name="email" autocomplete="email" required /><div class="field__err"></div></div>
+            </div>
+            <div class="field two">
+              <div><label for="r-phone">Phone Number</label><input type="tel" id="r-phone" name="phone" autocomplete="tel" /></div>
+              <div><label for="r-guests">Guest Count</label><input type="number" id="r-guests" name="guests" min="1" max="10" value="1" /></div>
+            </div>
+            <div class="field" data-field="attending">
+              <label>Attending?</label>
+              <div class="attend">
+                <label><input type="radio" name="attending" value="yes" /> Joyfully accepts</label>
+                <label><input type="radio" name="attending" value="no" /> Regretfully declines</label>
+              </div>
+              <div class="field__err"></div>
+            </div>
+            <div class="field"><label for="r-diet">Dietary Requirements</label><input type="text" id="r-diet" name="diet" /></div>
+            <div class="field"><label for="r-message">Message</label><textarea id="r-message" name="message" rows="3"></textarea></div>
+            <button type="submit" class="btn btn--light btn--lg rsvp__submit" data-magnetic="0.25" data-cursor="OPEN">Submit RSVP <span class="arw">↗</span></button>
+            <p class="form-status" role="status"></p>
+          </form>
+
+          <div class="rsvp__success" data-rsvp-success hidden>
+            <h3>Thank you, <span data-success-name>friend</span>.</h3>
+            <p>Your RSVP is in, and we couldn't be happier. We'll see you there.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRY -->
+    <section class="section registry" id="registry">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="meta">Gift Registry</span>
+          <h2 data-split="word">A Thoughtful Registry</h2>
+          <p>Your presence is the gift — but for those who kindly wish, a couple of options.</p>
+        </div>
+        <div class="registry__grid" data-render="registry" data-stagger="0.12"></div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="section blog" id="blog">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="meta">Wedding Blog</span>
+          <h2 data-split="word">Stories, Tips &amp; Ideas</h2>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="blog__track" data-drag data-cursor="DRAG" data-render="blog"></div>
+        <div style="text-align:center;margin-top:2rem"><a href="blog.html" class="btn" data-magnetic="0.3" data-cursor="OPEN">All stories <span class="arw">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
