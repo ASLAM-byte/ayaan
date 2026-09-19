@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSVP — Noor &amp; Yusuf</title>
+  <meta name="description" content="Kindly reply to Noor & Yusuf's wedding invitation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@400;500;600&family=Reem+Kufi:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body data-lang="en">
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="meta fade" data-i18n="rsvp.kicker">Kindly reply</p>
+        <h1 aria-label="Will you join us"><span class="row"><span class="line-in" data-i18n="rsvp.title">Will You Join Us?</span></span></h1>
+        <p class="page-hero__lede fade" data-i18n="rsvp.note">We hope to hear from you by the first of April, 2027.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:clamp(1rem,3vw,2rem)">
+      <div class="wrap rsvp__grid">
+        <form data-rsvp novalidate>
+          <div class="field two">
+            <div data-field="name">
+              <label for="r-name" data-i18n="rsvp.name">Full Name</label>
+              <input type="text" id="r-name" name="name" autocomplete="name" required />
+              <div class="field__err"></div>
+            </div>
+            <div data-field="email">
+              <label for="r-email" data-i18n="rsvp.email">Email</label>
+              <input type="email" id="r-email" name="email" autocomplete="email" required />
+              <div class="field__err"></div>
+            </div>
+          </div>
+
+          <div class="field" data-field="attending">
+            <label data-i18n="rsvp.attending">Will you attend?</label>
+            <div class="attend">
+              <label><input type="radio" name="attending" value="yes" /> <span data-i18n="rsvp.yes">Joyfully accepts</span></label>
+              <label><input type="radio" name="attending" value="no" /> <span data-i18n="rsvp.no">Regretfully declines</span></label>
+            </div>
+            <div class="field__err"></div>
+          </div>
+
+          <div class="field two">
+            <div>
+              <label for="r-guests" data-i18n="rsvp.guests">Number of Guests</label>
+              <input type="number" id="r-guests" name="guests" min="0" max="10" value="1" />
+            </div>
+            <div>
+              <label for="r-diet" data-i18n="rsvp.diet">Dietary Requirements</label>
+              <input type="text" id="r-diet" name="diet" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="r-song" data-i18n="rsvp.song">A song to dance to (optional)</label>
+            <input type="text" id="r-song" name="song" />
+          </div>
+
+          <div class="field">
+            <label for="r-message" data-i18n="rsvp.message">A note for us</label>
+            <textarea id="r-message" name="message" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--olive btn--lg rsvp__submit" data-magnetic="0.25" data-cursor="OPEN" data-i18n="rsvp.submit">Send RSVP <span class="arw">↗</span></button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Noor &amp; Yusuf</title>
+  <meta name="description" content="A few of the frames Noor and Yusuf have collected on the way here." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@400;500;600&family=Reem+Kufi:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body data-lang="en">
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="meta fade" data-i18n="gallery.kicker">Moments</p>
+        <h1 aria-label="Gallery"><span class="row"><span class="line-in" data-i18n="gallery.title">Gallery</span></span></h1>
+        <p class="page-hero__lede fade" data-i18n="gallery.lede">A few of the frames we've collected on the way here.</p>
+      </div>
+    </header>
+    <section class="section" style="padding-top:clamp(1rem,3vw,2rem)">
+      <div class="wrap"><div class="gallery__grid" data-gallery></div></div>
+    </section>
+  </main>
+
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <button class="lightbox__btn lightbox__prev" aria-label="Previous">‹</button>
+    <img class="lightbox__img" src="" alt="" />
+    <button class="lightbox__btn lightbox__next" aria-label="Next">›</button>
+    <span class="lightbox__count"></span>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/page.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
