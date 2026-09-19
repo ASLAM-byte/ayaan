@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Velvet Promise</title>
+  <meta name="description" content="Contact the Velvet Promise atelier — enquiries, appointments, and client care." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main>
+    <header class="page-hero wrap">
+      <div class="meta fade">Get in touch</div>
+      <h1 aria-label="Say hello">
+        <span class="row"><span class="line-in">Say <i>Hello</i></span></span>
+      </h1>
+      <p class="page-hero__lede fade">For enquiries, appointments, or a note about your order — we read every message ourselves.</p>
+    </header>
+
+    <section class="section" style="padding-top:clamp(2rem,5vw,4rem)">
+      <div class="wrap contact-grid">
+        <form id="contactForm" novalidate>
+          <div class="field"><label for="cName">Name</label><input type="text" id="cName" name="name" required /></div>
+          <div class="field"><label for="cEmail">Email</label><input type="email" id="cEmail" name="email" required /></div>
+          <div class="field">
+            <label for="cTopic">Reason</label>
+            <select id="cTopic" name="topic">
+              <option value="">Select…</option>
+              <option>General enquiry</option>
+              <option>Atelier appointment</option>
+              <option>Order & client care</option>
+              <option>Press</option>
+            </select>
+          </div>
+          <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" name="message" rows="4" required></textarea></div>
+          <button type="submit" class="btn btn--wine btn--lg" data-magnetic="0.3" data-cursor="SEND">Send message <span class="arw">↗</span></button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+
+        <aside class="contact-side">
+          <div><h3>Atelier</h3><p>18 Rue des Merisiers<br />75011 Paris, France</p></div>
+          <div><h3>Email</h3><a href="mailto:hello@velvetpromise.co" class="ul">hello@velvetpromise.co</a></div>
+          <div><h3>Hours</h3><p>By appointment<br />Tue – Sat, 11–18 CET</p></div>
+          <div><h3>Follow</h3><a href="#" class="ul">Instagram</a><a href="#" class="ul">Pinterest</a></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/partials.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("contactForm");
+      if (!form) return;
+      var status = document.getElementById("formStatus");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var name = document.getElementById("cName").value.trim();
+        var email = document.getElementById("cEmail").value.trim();
+        var msg = document.getElementById("cMsg").value.trim();
+        if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !msg) {
+          status.style.color = "#a12f45";
+          status.textContent = "Please add your name, a valid email, and a message.";
+          return;
+        }
+        status.style.color = "var(--velvet)";
+        status.textContent = "Thank you, " + name + ". We'll reply within two working days.";
+        form.reset();
+      });
+    })();
+  </script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

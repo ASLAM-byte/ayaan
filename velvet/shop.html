@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Velvet Promise</title>
+  <meta name="description" content="Shop the Velvet Promise edit — slow-made silk intimates and eveningwear from our Paris atelier." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main>
+    <header class="page-hero wrap">
+      <div class="meta fade">The Collection</div>
+      <h1 aria-label="Shop the edit"><span class="row"><span class="line-in">The <i>Edit</i></span></span></h1>
+      <p class="page-hero__lede fade">Every piece is cut by hand in limited runs. When a colour sells through, it rests until the next season.</p>
+    </header>
+
+    <section class="section collection" style="padding-top:clamp(2rem,5vw,4rem)">
+      <div class="wrap">
+        <div class="collection__grid" id="shopGrid"><!-- injected --></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/partials.js"></script>
+  <script src="js/data.js"></script>
+  <script>
+    (function () {
+      var D = window.VP_DATA; if (!D) return;
+      var host = document.getElementById("shopGrid");
+      D.products.forEach(function (p) {
+        var t = document.createElement("template");
+        t.innerHTML = (
+          '<a class="product" href="contact.html" data-cursor="ENQUIRE" data-reveal>' +
+            '<div class="product__media img-mask">' +
+              (p.tag ? '<span class="product__tag">' + p.tag + '</span>' : '') +
+              '<img class="main" src="' + D.IMG(p.main, 800) + '" alt="' + p.name + '" loading="lazy" />' +
+              '<img class="alt" src="' + D.IMG(p.alt, 800) + '" alt="' + p.name + ' alternate view" loading="lazy" />' +
+            '</div>' +
+            '<div class="product__meta"><span class="product__name">' + p.name + '</span><span class="product__price">' + p.price + '</span></div>' +
+            '<span class="product__cat">' + p.cat + '</span>' +
+          '</a>'
+        ).trim();
+        host.appendChild(t.content.firstChild);
+      });
+      if (window.VP_bindCursor) window.VP_bindCursor();
+    })();
+  </script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
