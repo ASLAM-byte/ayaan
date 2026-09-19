@@ -1,0 +1,11 @@
+# Runtime database (recreated via `npm run seed`)
+portfolio.db
+portfolio.db-journal
+portfolio.db-wal
+portfolio.db-shm
+
+# Logs
+*.log
+
+# Dependencies (none required, but just in case)
+node_modules/
